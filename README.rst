@@ -1,29 +1,24 @@
-BLOG
+Blog
 
 Blog is a reusable blog app for Django
 
 Detailed documentation is in the "docs" directory.
 
 Quick start
------------
 
-1. Add 'reusable_blog' to your INSTALLED_APPS setting like this::
+Add "reusable_blog" to your INSTALLED_APPS setting like this:
 
-    INSTALLED_APPS = (
-        ...
-        'reusable_blog',
-    )
+INSTALLED_APPS = (
+    ...
+    'reusable_blog',
+)
+Include the polls URL conf in your project urls.py like this:
 
-2. Include the polls URLconf in your project urls.py like this::
+url(r'^blogs/', include('reusable_blog.urls')),
 
-    url(r'^blog/', include('reusable_blog.urls')),
+Run python manage.py migrate to create the blog models.
 
-3. Run `python manage.py migrate` to create the blog models.
+Add the blogs css::
+<link rel="stylesheet" href="{% static "css/blog.css" %}">
 
-4. Add the blogs css::
-    <link rel="stylesheet" href="{% static "css/blog.css" %}">
-
-5. Add a link to the blog in the base.html
-    <li><a href="/blog/">Our Blog</a></li>
-
-6. Visit http://127.0.0.1:8000/blog/ to view the blogs you create.
+Visit http://127.0.0.1:8000/blogs/ to view the blogs you create
