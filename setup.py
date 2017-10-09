@@ -10,7 +10,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 setup(
     name='django-reusable-blog',
     version='1.0.0',
-    packages=['blog'],
+    packages=['reusable_blog'],
     include_package_data=True,
     license='BSD License',  # example license
     description='A simple Django app to create blogs',
