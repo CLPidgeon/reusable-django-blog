@@ -4,25 +4,24 @@ from setuptools import setup
 with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     README = readme.read()
 
-# allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='django-reusable-blog',
+    name='reusable-blog-app',
     version='1.0.0',
     packages=['reusable_blog'],
     include_package_data=True,
-    license='BSD License',  # example license
+    license='BSD License',
     description='A simple Django app to create blogs',
     long_description=README,
-    url='http://www.topsite.com/',
-    author='Clare Pidgeon',
-    author_email='cpidge@topsite.com',
+    url='http://www.example.com',
+    author='Clare',
+    author_email='clare@pidge.com',
     classifiers=[
-        'Environment :: Web Environment',
+        'Environment :: Web Development',
         'Framework :: Django',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',  # example license
+        'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
